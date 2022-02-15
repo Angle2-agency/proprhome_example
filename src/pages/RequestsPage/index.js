@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 import Layout from "../../components/Layout";
 import RequestCard from "./RequestCard";
@@ -9,29 +10,23 @@ import style from "./style.module.scss";
 
 import servises from "../../core/services";
 
-const { getSuppurtTickets } = servises;
+const { getAllRequests } = servises;
 
 const RequestsPage = () => {
-  const [ticketsList, setTicketsList] = useState(null);
   const [isShowForm, setIsShowForm] = useState(false);
+  const requestsList = useSelector((state) => state.requestsList);
 
   useEffect(() => {
-    getTicketsList();
+    getAllRequests();
   }, []);
-
-  const getTicketsList = async () => {
-    const response = await getSuppurtTickets();
-    setTicketsList(response.payload);
-    return response;
-  };
 
   return (
     <Layout>
       <div className={style.wrapper}>
-        {!ticketsList ? (
+        {!requestsList ? (
           <Skeleton />
         ) : (
-          ticketsList?.map((ticket) => <RequestCard ticket={ticket} />)
+          requestsList?.map((ticket) => <RequestCard ticket={ticket} />)
         )}
       </div>
       <SupportTicketForm show={isShowForm} setShow={setIsShowForm} />
