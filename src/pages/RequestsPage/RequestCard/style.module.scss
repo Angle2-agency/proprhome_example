@@ -1,0 +1,161 @@
+.card {
+  background: #ffffff;
+  box-shadow: 0 0 16px rgba(16, 16, 16, 0.16);
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 24px;
+  max-width: 1400px;
+  .header {
+    padding: 32px 32px 24px 22px;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      width: 4px;
+      background: #ced4df;
+      border-radius: 0 8px 8px 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+    &.active {
+      &::before {
+        background-color: #3360ad;
+      }
+      .arrow {
+        background-color: #3360ad;
+        color: #fff;
+        svg {
+          transform: scale(-1);
+        }
+      }
+    }
+    h3 {
+      display: flex;
+      align-items: center;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0.03em;
+      color: #474f5c;
+      cursor: pointer;
+      &:hover {
+        .arrow {
+          background-color: #3360ad;
+          color: #fff;
+        }
+      }
+      .arrow {
+        width: 26px;
+        height: 26px;
+        border: 3px solid #3360ad;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: #3360ad;
+        margin-right: 10px;
+        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+          background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        svg {
+          transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        }
+      }
+    }
+    .actions {
+      margin-left: auto;
+      :global {
+        .MuiFormControlLabel-root {
+          align-items: center;
+          margin-right: 0;
+          .MuiSvgIcon-root {
+            color: #3360ad;
+          }
+          .MuiFormControlLabel-label {
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.03em;
+            color: #3360ad;
+          }
+        }
+      }
+    }
+    .dates {
+      list-style: none;
+      margin: 24px 0 0 36px;
+      padding: 0;
+      display: flex;
+      li {
+        margin-right: 32px;
+        min-width: 120px;
+        span {
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 20px;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: #5a6372;
+          margin-right: 8px;
+          display: block;
+        }
+        b {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.01em;
+          color: #2d3543;
+          display: block;
+        }
+      }
+    }
+  }
+  .collapse {
+    margin: 0 32px;
+    padding: 24px 0 64px 0;
+    border-top: 1px solid #ced4df;
+    .newReply {
+      background: #f8f8fa;
+      border-radius: 8px;
+      padding: 24px;
+      max-width: 776px;
+      textarea {
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.01em;
+        color: #5a6372;
+        resize: none;
+      }
+      .upload {
+        :global {
+          .MuiButton-root {
+            background: #e9ecf1;
+            min-width: auto;
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+      .submit {
+        width: 112px;
+      }
+    }
+    .replyList {
+      margin-top: 40px;
+    }
+    .more {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      color: #3360ad;
+    }
+  }
+}

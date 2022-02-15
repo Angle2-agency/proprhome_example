@@ -1,0 +1,96 @@
+.wrapper {
+  padding: 40px 64px 64px 32px;
+}
+
+.header {
+  padding-right: 32px;
+  .search {
+    position: relative;
+    width: 750px;
+    margin-right: 34px;
+    flex-shrink: 0;
+    .startAdornment {
+      position: absolute;
+      left: 0;
+      bottom: 6px;
+      width: 20px;
+      height: 20px;
+      color: #3360ad;
+    }
+    .field {
+      margin-top: 0;
+      .searchButton {
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #3360ad;
+      }
+    }
+    :global {
+      .MuiInputBase-root {
+        padding-left: 24px;
+      }
+      .MuiFormLabel-root {
+        left: 24px;
+      }
+    }
+  }
+  :global {
+    .MuiFormLabel-root {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      z-index: 1;
+      cursor: pointer;
+      pointer-events: none;
+      img {
+        margin-left: 8px;
+        pointer-events: all;
+        transition: transform 250ms ease;
+      }
+      &.MuiInputLabel-shrink {
+        img {
+          transform: scale(1.25);
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  width: 640px;
+  .modalHeader {
+    height: 144px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e9ecf1;
+  }
+  .modalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 0 48px 0;
+    p {
+      margin: 8px auto 56px auto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #5a6372;
+      max-width: 400px;
+    }
+    .deleteButton {
+      width: 232px;
+      margin-bottom: 8px;
+    }
+    .cancelButton {
+      width: 232px;
+      color: #2d3543;
+    }
+  }
+}

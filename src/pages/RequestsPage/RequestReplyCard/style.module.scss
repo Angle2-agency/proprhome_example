@@ -1,0 +1,92 @@
+.reply {
+  margin-bottom: 40px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    .name {
+      display: flex;
+      align-items: center;
+      b {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.01em;
+        color: #3360ad;
+        margin-right: 8px;
+      }
+      span {
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.01em;
+        color: #f8f8fa;
+        &.created {
+          background-color: #3360ad;
+        }
+        &.success {
+          background-color: #208c72;
+        }
+      }
+    }
+    .date {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.01em;
+      color: #5a6372;
+      svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+      }
+    }
+  }
+  .text {
+    background: #f8f8fa;
+    border: 1px solid #ced4df;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 24px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2d3543;
+  }
+  .documents {
+    margin-top: 16px;
+    h5 {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #2d3543;
+      margin-bottom: 8px;
+    }
+    .fileList {
+      display: flex;
+      align-items: center;
+      a {
+        display: inline-flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        margin-right: 18px;
+        img {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

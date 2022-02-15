@@ -1,0 +1,21 @@
+.mainLayout {
+  transition: filter 250ms ease;
+}
+.blur {
+  filter: blur(2.5px);
+}
+
+.authorization {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  a {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    margin-left: 32px;
+  }
+}
